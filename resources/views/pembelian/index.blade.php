@@ -25,6 +25,7 @@
         <th>Jumlah</th>
         <th>Harga</th>
         <th>Barang</th>
+        <th>Aksi</th>
     </tr>
     </div>
 </thead>

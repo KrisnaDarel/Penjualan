@@ -26,6 +26,7 @@
         <th>Stok</th>
         <th>Suplier</th>
         <th>Kategori</th>
+        <th>Aksi</th>
     </tr>
     </div>
 </thead>
