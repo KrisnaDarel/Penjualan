@@ -9,43 +9,47 @@
     <div class="card-header">
         <div class="card-title">
 
-        <h5>Data Barang</h5>
+    <h5>Data Barang</h5>
 
-        <button type="button"class="btn btn-success btn-sm float-end" data-bs-toggle="modal" data-bs-target="#modalTambah">
-            <i class="fa fa-plus"></i></button>
+       <a class="btn btn-success btn-sm float-end" href="{{route ('barang.create') }}">
+        <i class="fa fa-plus"></i></a>
         </div>
     </div>
-</div>
+
+
 <div class="card-body">
-<table class="table table-bordered">
-<thead>
+<table class="table table-striped">
+  <thead>
     <tr>
         <th>Id</th>
         <th>Nama</th>
         <th>Harga</th>
         <th>Stok</th>
-        <th>Suplier</th>
+        <th>Supplier</th>
         <th>Kategori</th>
         <th>Aksi</th>
     </tr>
-    </div>
-</thead>
-<tbody>
+</div>
+</div>
+  </thead>
+  <tbody>
+  @foreach ($barang as $item)
     <tr>
-        <td>1</td>
-        <td>Darel</td>
-        <td>50.000</td>
-        <td>15</td>
-        <td>Yakin</td>
-        <td>Aksesoris</td>
+        <td>{{$loop->iteration}}</td>
+        <td>{{$item->nama}}</td>
+        <td>{{$item->harga}}</td>
+        <td>{{$item->stok}}</td>
+        <td>{{$item->suplier->nama}}</td>
+        <td>{{$item->kategori->nama}}</td>
         <td>
-            <a href="#" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i>
+            <a href="/barang/{{$item->id}}/edit"class="btn btn-warning btn-sm"> <i class="fa fa-edit"></i>
             <a>
-            <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>
+            <a href="/barang/{{$item->id}}/hapus"class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i>
             <a>
         </td>
     </tr>
-</tbody>
+    @endforeach
+  </tbody>
 </table>
 
 <!-- Modal -->

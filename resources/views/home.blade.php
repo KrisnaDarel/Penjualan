@@ -1,24 +1,27 @@
-@extends('layout.app')
+@extends ('layout.app')
 
-@section('title')
+@section ('title')
     Home
 @endsection
 
-@section('content')
-<div class="container overflow-hidden text-center">
-  <div class="row gy-1">
-    <div class="col-6">
-      <div class="p-3 border bg-light mt-5">10 Barang</div>
-    </div>
-    <div class="col-6">
-      <div class="p-3 border bg-light mt-5">15 Kategori</div>
-    </div>
-    <div class="col-6">
-      <div class="p-3 border bg-light mt-5">100 Suplier</div>
-    </div>
-    <div class="col-6">
-      <div class="p-3 border bg-light mt-5">500 Pembeli</div>
-    </div>
-  </div>
+@section ('content')
+    <div class="row g-10 text-center">
+        <div class="col-3">
+        <div class="p-3  bg-primary mt-4">10 Barang</div>
+        </div>
+
+        <div class="col-3">
+        <div class="p-3  bg-warning mt-4">15 kategori</div>
+        </div>
+
+        <div class="col-3">
+        <div class="p-3  bg-primary mt-4">50 Suplier</div>
+        </div>
+
+        <div class="col-3">
+        <div class="p-3 bg-warning mt-4">500 Pembeli</div>
+        </div>
 </div>
+
+
 @endsection
